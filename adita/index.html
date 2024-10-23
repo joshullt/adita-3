@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adita</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f9f9f9;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+        h1 {
+            color: #ff4081;
+            font-size: 3em;
+            margin: 20px 0;
+        }
+        .cloud {
+            position: relative;
+            margin: 20px auto;
+        }
+        .cloud img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .heart-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            color: #ff4081;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adita</h1>
+    <div class="cloud" onclick="openModal('te amo mucho mi bebe.')">
+        <img src="https://raw.githubusercontent.com/usuario/repositorio/main/50e36b87-88dd-4ee4-a444-9a0a4b713f4e.jpg" alt="te amo mi bebe">
+        <div class="heart-overlay">&lt;3</div>
+    </div>
+
+    <div class="cloud" onclick="openModal('te amo mucho mi papalover')">
+        <img src="https://raw.githubusercontent.com/usuario/repositorio/main/be79955b-5a52-466c-bf7f-199f49dabc27.jpg" alt="te amo mi papalover">
+        <div class="heart-overlay">&lt;3</div>
+    </div>
+
+    <div class="cloud" onclick="openModal('te amo mucho mi bailarina')">
+        <img src="https://raw.githubusercontent.com/usuario/repositorio/main/950a0bd5-13a1-4ced-829d-26ae6fa3297b.jpg" alt="te amo mi bailarina">
+        <div class="heart-overlay">&lt;3</div>
+    </div>
+
+    <div class="cloud" onclick="openModal('te amo mucho mi dormilona')">
+        <img src="https://raw.githubusercontent.com/usuario/repositorio/main/2ecb2563-eb53-4ffb-b957-5c8380b62e2b.jpg" alt="te amo mi dormilona">
+        <div class="heart-overlay">&lt;3</div>
+    </div>
+
+    <div class="cloud" onclick="openModal('te amo mucho mi inteligente')">
+        <img src="https://raw.githubusercontent.com/usuario/repositorio/main/a38d1849-e477-44b2-88ba-19460250d11e.jpg" alt="te amo mi inteligente">
+        <div class="heart-overlay">&lt;3</div>
+    </div>
+    
+    <div class="cloud" onclick="openModal('te amo mucho mi adita:c <3')">
+        <img src="https://raw.githubusercontent.com/usuario/repositorio/main/9dbfdc0d-b592-4421-a386-d8a5fb715c4b.jpg" alt="te amo mi adita">
+        <div class="heart-overlay">&lt;3</div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modalMessage" style="font-size: 1.5em;"></p>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="https://raw.githubusercontent.com/usuario/repositorio/main/Apocalypse%20-%20Cigarettes%20After%20Sex%20-%20Cigarettes%20After%20Sex%20(youtube).mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <button onclick="playAudio()">Reproducir Música</button>
+    <button onclick="pauseAudio()">Pausar Música</button>
+
+    <script>
+        function openModal(message) {
+            document.getElementById('modalMessage').innerText = message;
+            document.getElementById('myModal').style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+        function playAudio() {
+            var audio = document.getElementById('backgroundMusic');
+            audio.play();
+        }
+        function pauseAudio() {
+            var audio = document.getElementById('backgroundMusic');
+            audio.pause();
+        }
+    </script>
+</body>
+</html>
